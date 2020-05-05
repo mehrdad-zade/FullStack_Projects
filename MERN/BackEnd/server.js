@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
 const placesRoutes = require('./routes/places-routes');//import the middlewhere
 const usersRoutes = require('./routes/users-routes');//import the middlewhere
@@ -27,4 +28,22 @@ app.use((error, req, res, next) => {
   res.json({message: error.message || 'An unknown error occurred!'});
 });
 
-app.listen(5000);
+mongoose
+	.connect("mongodb+srv://mehrdadZade:qeqdop-jAjziw-5wynje@sharedplaces-cluster-kf8yl.mongodb.net/SharedPlaces?retryWrites=true&w=majority")
+	.then( () => {
+		console.log("\n**********Mongoose is connected*********************************"); 
+		app.listen(5000); 
+		console.log("**********Server is up         *********************************"); 
+		} )
+	.catch( err => {console.log(err)} );
+
+//qeqdop-jAjziw-5wynje
+
+
+
+
+
+
+
+
+
