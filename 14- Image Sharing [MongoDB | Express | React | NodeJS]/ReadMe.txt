@@ -1,0 +1,1 @@
+This is full stack solution using Mangoos, Express, React and NodeJS to build a website for sharing image of places by multiple users who can be authenticated by signing up/log-in. the API between the backend and frontend provides ability to add users and places to the DB.
