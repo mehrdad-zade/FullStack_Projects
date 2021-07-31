@@ -1,0 +1,49 @@
+ReadMe.txt
+
+Angular:
+	- Components: each part of the dom has its own component that would render the UI independantly
+	- Services: are used for interacting with the data/API
+	- Directives: special instructions for running html
+	- Binding: bindes html with javaScript
+	- Routing: navigate from one UI to another.
+
+Install:
+	- npm
+	- Angular CLI
+
+Setup:
+	- ng new checkinapp: if it didn't work: uninstall and reistall cli: 
+		- npm uninstall –g @angular/cli
+		- npm install -g @angular/cli@latest
+		- npm update
+		- ng new first-app
+		- if there are issues, sometimes there are some files like e2e missing from the project. copy them from old proj.
+
+
+checkinapp:
+	- components:
+		- startcheckin
+		- checkin
+		- confirmcheckin
+	- service:
+		- data: make restul call to backend
+	- routing.module.ts: use this in the app.module.ts
+	- app.module.ts: 
+		- decleration: all components goes here
+		- imports: all modules goes here
+		- providers:all services and providers goes here
+		- bootstrap: the starting point of which component should be used at launch time
+
+
+@angular/forms
+@angular/platform-browser-dynamic
+@angular/router
+
+ imports: [
+               ~
+ 21     BrowserModule,
+    ~~~~~~~~~~~~~~~~~~
+... 
+ 24     FormsModule
+    ~~~~~~~~~~~~~~~
+ 25   ],
